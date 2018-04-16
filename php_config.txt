@@ -1,0 +1,84 @@
+yum install -y \ 
+libxml2-devel  \
+bzip2-devel  \
+libcurl-devel \
+libmcrypt-devel \
+readline-devel 
+
+
+
+
+
+./configure \
+--prefix=/usr/local/php56 \
+--with-config-file-path=/usr/local/php56/etc \
+--enable-inline-optimization \
+--disable-debug \
+--disable-rpath \
+--enable-shared \
+--enable-opcache \
+--enable-fpm \
+--with-fpm-user=www \
+--with-fpm-group=www \
+--with-mysql=mysqlnd \
+--with-mysqli=mysqlnd \
+--with-pdo-mysql=mysqlnd \
+--with-gettext \
+--enable-mbstring \
+--with-iconv \
+--with-mcrypt \
+--with-mhash \
+--with-openssl \
+--enable-bcmath \
+--enable-soap \
+--with-libxml-dir \
+--enable-pcntl \
+--enable-shmop \
+--enable-sysvmsg \
+--enable-sysvsem \
+--enable-sysvshm \
+--enable-sockets \
+--with-curl \
+--with-zlib \
+--enable-zip \
+--with-bz2 
+
+
+安装完成
+
+Build complete.
+Don't forget to run 'make test'.
+
+Installing shared extensions:     /usr/local/php56/lib/php/extensions/no-debug-non-zts-20131226/
+Installing PHP CLI binary:        /usr/local/php56/bin/
+Installing PHP CLI man page:      /usr/local/php56/php/man/man1/
+Installing PHP FPM binary:        /usr/local/php56/sbin/
+Installing PHP FPM config:        /usr/local/php56/etc/
+Installing PHP FPM man page:      /usr/local/php56/php/man/man8/
+Installing PHP FPM status page:   /usr/local/php56/php/php/fpm/
+Installing PHP CGI binary:        /usr/local/php56/bin/
+Installing PHP CGI man page:      /usr/local/php56/php/man/man1/
+Installing build environment:     /usr/local/php56/lib/php/build/
+Installing header files:           /usr/local/php56/include/php/
+Installing helper programs:       /usr/local/php56/bin/
+  program: phpize
+  program: php-config
+Installing man pages:             /usr/local/php56/php/man/man1/
+  page: phpize.1
+  page: php-config.1
+Installing PEAR environment:      /usr/local/php56/lib/php/
+[PEAR] Archive_Tar    - installed: 1.4.3
+[PEAR] Console_Getopt - installed: 1.4.1
+[PEAR] Structures_Graph- installed: 1.1.1
+[PEAR] XML_Util       - installed: 1.4.2
+[PEAR] PEAR           - installed: 1.10.5
+Wrote PEAR system config file at: /usr/local/php56/etc/pear.conf
+You may want to add: /usr/local/php56/lib/php to your php.ini include_path
+/usr/local/src/php-5.6.33/build/shtool install -c ext/phar/phar.phar /usr/local/php56/bin
+ln -s -f phar.phar /usr/local/php56/bin/phar
+Installing PDO headers:           /usr/local/php56/include/php/ext/pdo/
+[root@localhost php-5.6.33]# echo $?
+0
+
+
+make test
